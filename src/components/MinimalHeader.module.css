@@ -1,0 +1,50 @@
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--cobalt);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.phone svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 480px) {
+  .phone span {
+    display: none;
+  }
+  .phone {
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--cobalt);
+    color: var(--white);
+  }
+}

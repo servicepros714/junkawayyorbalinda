@@ -1,0 +1,51 @@
+.bar {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: var(--white);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -6px 20px rgba(0, 30, 80, 0.08);
+  }
+
+  .call,
+  .quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 52px;
+    border-radius: var(--radius);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+
+  .call {
+    background: var(--cobalt);
+    color: var(--white);
+  }
+
+  .call svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .quote {
+    background: var(--ink);
+    color: var(--white);
+  }
+}

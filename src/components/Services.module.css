@@ -1,0 +1,133 @@
+.section {
+  padding: 104px 0;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: end;
+}
+
+.headLead {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.grid {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  position: relative;
+  background: var(--white);
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  padding: 26px 22px 28px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--cobalt);
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 0 var(--cobalt);
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+  background: var(--cobalt-tint);
+  color: var(--cobalt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.card:hover .icon {
+  background: var(--cobalt);
+  color: var(--white);
+}
+
+.icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.num {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 15px;
+  color: #c3ccdb;
+}
+
+.cardTitle {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 900;
+  font-stretch: 110%;
+  font-variation-settings: 'wdth' 110;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.cardText {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.foot {
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.foot p {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+@media (max-width: 1020px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 72px 0;
+  }
+  .head {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .foot {
+    flex-direction: column;
+  }
+  .foot :global(.btn) {
+    width: 100%;
+  }
+}
